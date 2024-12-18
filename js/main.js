@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     $("#home-btn-jump").click(function () {
         jumpGameOver();
-        window.location.href = "./Frontpage.html";
+        window.location.href = "./index.html";
     });
 
     $("#again-btn-memory").click(function () {
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     $("#home-btn-memory").click(function () {
         memoryGameOver();
-        window.location.href = "./Frontpage.html";
+        window.location.href = "./index.html";
     });
 });
 
