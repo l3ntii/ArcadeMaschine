@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P" />
+    <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.css" />
+    <link href="css/CRTScreenFlicker.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>Scoreboard</title>
+</head>
+
+<body>
+    <div id="header" class="container is-flex is-bordered">
+        <h1 style="text-align: center">
+            <span class="badge is-blue">Arcade Machine</span>
+        </h1>
+    </div>
+
+    <div id="content" class="container is-flex is-bordered">
+
+        <div class="container">
+
+            <table id="SB" class="sb player-table">
+                <thead>
+                    <tr>
+                        <th id="playername">NAME</th>
+                        <th id="playerscore">SCORE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="Frontpage.html">
+            <button type="button" class="nes-btn">Zurück zum Hauptmenü</button>
+        </a>
+        <button>
+            <button type="button" id="reset-scores" class="nes-btn">Reset scores</button>
+        </button>
+    </div>
+
+    <script src="js/sound/playNavSound.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

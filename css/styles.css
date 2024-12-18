@@ -1,0 +1,224 @@
+﻿:root {
+	--black: #212529;
+	--white: #ffffff;
+	--blue: #209cee;
+	--green: #92cc41;
+	--yellow: #f7d51d;
+	--red: #e76e55;
+	--space-btw: 20px;
+	--border: 4px solid var(--white);
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	overflow: hidden;
+	cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=), auto;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	-webkit-font-smoothing: antialiased;
+	background-color: #000000;
+	color: var(--white);
+	align-items: center;
+	justify-content: center;
+}
+
+	body::after {
+		background-color: var(--black);
+	}
+
+.container > * {
+	margin-bottom: var(--space-btw);
+}
+
+.container > :last-child {
+	margin-bottom: 0;
+}
+
+.container.is-flex {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	width: 75%; /* 75% der Bildschirmbreite */
+	margin: 20px auto; /* Zentriert den Inhalt horizontal */
+}
+
+	.container.is-flex#header {
+		flex: 0 0 auto;
+		padding: 60px 30px;
+		color: var(--white);
+	}
+
+	.container.is-flex#content {
+		flex: 1 0 auto;
+		padding: 30px;
+	}
+
+	.container.is-flex#footer {
+		flex: 0 0 auto;
+		padding: 30px;
+	}
+
+.container.cols {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 100%;
+}
+
+.container.col {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.container.is-bordered {
+	position: relative;
+	padding: 1.5rem 2rem;
+	background-color: var(--black);
+	border: var(--border);
+	margin: 0;
+}
+
+.container.with-title {
+	position: relative;
+	padding: 1.5rem 2rem;
+	background-color: var(--black);
+	border: var(--border);
+	display: block;
+}
+
+	.container.with-title > .title {
+		display: table;
+		padding: 0 0.5rem;
+		margin: -1.8rem 0 1rem;
+		font-size: 1rem;
+		background-color: var(--black);
+	}
+
+	.container.with-title.is-centered > .title {
+		margin: -2rem auto 1rem;
+	}
+
+	.container.with-title.is-right > .title {
+		margin: -2rem 0 1rem auto;
+	}
+
+.container.is-blinking {
+	animation: blink-border 1s infinite steps(1);
+}
+
+@keyframes blink-border {
+	0% {
+		border-color: var(--black);
+	}
+
+	50% {
+		border-color: var(--white);
+	}
+
+	100% {
+		border-color: var(--black);
+	}
+}
+
+table {
+	width: 100%;
+	border: none;
+	border-collapse: collapse;
+}
+
+tbody:before {
+	line-height: 1em;
+	content: "\200C";
+	display: block;
+}
+
+tr {
+	height: 30px;
+}
+
+	tr:nth-child(1) td {
+		color: var(--green);
+	}
+
+	tr:nth-child(2) td {
+		color: var(--yellow);
+	}
+
+	tr:nth-child(3) td {
+		color: var(--red);
+	}
+
+th {
+	border-bottom: 2px solid var(--white);
+}
+
+th,
+td {
+	text-align: left;
+	vertical-align: central;
+}
+
+	th:last-child,
+	td:last-child {
+		text-align: right;
+	}
+
+.badge {
+	position: relative;
+	display: inline-block;
+	margin: 0.5em;
+	/*    padding: 0.5em 0;
+*/ white-space: nowrap;
+	vertical-align: top;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+	.badge.is-blue {
+		color: var(--white);
+		background-color: var(--blue);
+		box-shadow: 0 0.5em var(--blue), 0 -0.5em var(--blue), 0.5em 0 var(--blue), -0.5em 0 var(--blue);
+	}
+
+	.badge.is-green {
+		color: var(--white);
+		background-color: var(--green);
+		box-shadow: 0 0.5em var(--green), 0 -0.5em var(--green), 0.5em 0 var(--green), -0.5em 0 var(--green);
+	}
+
+	.badge.is-red {
+		color: var(--white);
+		background-color: var(--red);
+		box-shadow: 0 0.5em var(--red), 0 -0.5em var(--red), 0.5em 0 var(--red), -0.5em 0 var(--red);
+	}
+
+	.badge.is-yellow {
+		color: var(--black);
+		background-color: var(--yellow);
+		box-shadow: 0 0.5em var(--yellow), 0 -0.5em var(--yellow), 0.5em 0 var(--yellow), -0.5em 0 var(--yellow);
+	}
+
+.nes-list.is-circle li::before {
+	color: var(--white) !important;
+}
+
+img.img-preview {
+	width: 100%;
+	object-fit: cover;
+	image-rendering: pixelated;
+	aspect-ratio: 4 / 3;
+}

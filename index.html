@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P" />
+    <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.css" />
+    <link href="css/CRTScreenFlicker.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="js/menu.js"></script>
+    <title>Arcade Machine</title>
+</head>
+<body>
+    <div id="header" class="container is-flex is-bordered">
+        <h1 style="text-align: center">
+            <span class="badge is-blue">Arcade Machine</span>
+        </h1>
+    </div>
+
+    <div id="content" class="container is-flex is-bordered">
+
+        <div class="container">
+            <h2>Game Selection</h2>
+
+            <div class="container cols">
+                <div class="container col is-bordered" style="border-color: var(--black); box-shadow: none;" onmouseover="startBlinkingBorder(this), changeImage(this)" onmouseout="stopBlinkingBorder(this), restoreImage(this)">
+                    <div class="container">
+                        <div style="text-align: center">
+                            <h3 class="badge is-green">
+                                Jump&Run
+                            </h3>
+                        </div>
+
+                        <img class="img-preview" src="data/img/placeholder.jpeg" alt="game-preview-image" onmouseover="changeImage(this, 'data/img/placeholder.gif')" onmouseout="restoreImage(this)">
+
+                        <div class="lists">
+                            <ul class="nes-list is-circle">
+                                <li>List item 1</li>
+                                <li>List item 2</li>
+                                <li>List item 3</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <a href="jumpgame.html">
+                            <button type="button" class="nes-btn is-success" style="width: 100%;">Start Game</button>
+                        </a>
+                        <a href="Scoreboard.html?game=Jump&Run">
+                            <button type="button" class="nes-btn" style="width: 100%;"style="width: 100%;">Scoreboard</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container col is-bordered" style="border-color: var(--black); box-shadow: none;" onmouseover="startBlinkingBorder(this), changeImage(this)" onmouseout="stopBlinkingBorder(this), restoreImage(this)">
+                    <div class="container">
+                        <div style="text-align: center">
+                            <h3 class="badge is-yellow">
+                                Tic-Tac-Toe
+                            </h3>
+                        </div>
+
+                        <img class="img-preview" src="data/img/placeholder.jpeg" alt="game-preview-image">
+
+                        <div class="lists">
+                            <ul class="nes-list is-circle">
+                                <li>List item 1</li>
+                                <li>List item 2</li>
+                                <li>List item 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <a href="TicTacToe.html">
+                            <button type="button" class="nes-btn is-warning" style="width: 100%;">Start Game</button>
+                        </a>
+                        <a href="Scoreboard.html?game=TicTacToe">
+                            <button type="button" class="nes-btn" style="width: 100%;">Scoreboard</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container col is-bordered" style="border-color: var(--black); box-shadow: none;" onmouseover="startBlinkingBorder(this), changeImage(this)" onmouseout="stopBlinkingBorder(this), restoreImage(this)">
+                    <div class="container">
+                        <div style="text-align: center">
+                            <h3 class="badge is-red">
+                                Memory
+                            </h3>
+                        </div>
+
+                        <img class="img-preview" src="data/img/placeholder.jpeg" alt="game-preview-image">
+
+                        <div class="lists">
+                            <ul class="nes-list is-circle">
+                                <li>List item 1</li>
+                                <li>List item 2</li>
+                                <li>List item 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <a href="memorygame.html">
+                            <button type="button" class="nes-btn is-error" style="width: 100%;"><span>Start Game</span></button>
+                        </a>
+                        <a href="Scoreboard.html?game=Memory Game">
+                            <button type="button" class="nes-btn" style="width: 100%;">Scoreboard</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/sound/playNavSound.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Run and Jump</title>
+  <link rel="stylesheet" href="./css/jumpGame.css" />
+</head>
+
+<body>
+  <div id="game-container">
+    <div id="player"></div>
+  </div>
+
+  <div id="level-popup">
+    <h2>Select Level</h2>
+    <button id="easy-btn">Easy</button>
+    <button id="medium-btn">Medium</button>
+    <button id="hard-btn">Hard</button>
+  </div>
+
+  <div id="name-popup" class="name-popup">
+    <input type="text" id="name-input-jump" placeholder="Enter your name">
+    <h3 id="jumpscore"></h3>
+    <button id="again-btn-jump">Play again</button>
+    <button id="home-btn-jump">Go Home</a></button>
+  </div>
+
+  <div id="score-level">Score: 0</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/jumpGame.js"></script>
+</body>
+
+</html>

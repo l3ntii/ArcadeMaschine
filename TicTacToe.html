@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P" />
+    <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.css" />
+    <link href="css/CRTScreenFlicker.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/ticTacToe.css" rel="stylesheet" />
+
+    <script src="js/ticTacToe.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body onload="init()">
+    <div id="header" class="container is-flex is-bordered">
+        <h1 style="text-align: center">
+            <span class="badge is-yellow">Tic Tac Toe</span>
+        </h1>
+    </div>
+
+    <div id="content" class="container is-flex is-bordered">
+        <div id="game-container">
+            <div id="gameBoard">
+                <div class="board">
+                    <div class="cell" data-row="0" data-col="0"></div>
+                    <div class="cell" data-row="0" data-col="1"></div>
+                    <div class="cell" data-row="0" data-col="2"></div>
+
+                    <div class="cell" data-row="1" data-col="0"></div>
+                    <div class="cell" data-row="1" data-col="1"></div>
+                    <div class="cell" data-row="1" data-col="2"></div>
+
+                    <div class="cell" data-row="2" data-col="0"></div>
+                    <div class="cell" data-row="2" data-col="1"></div>
+                    <div class="cell" data-row="2" data-col="2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="container is-flex is-bordered" style="flex-direction: row; align-content: space-between;">
+        <a href="Frontpage.html" style="margin: 0">
+            <button type="button" class="nes-btn">Back to Main Menu</button>
+        </a>
+        <button class="nes-btn is-warning" onclick="resetBoard()">Reset</button>
+    </div>
+
+    <section>
+        <dialog class="nes-dialog is-rounded" id="dialog-gamemode">
+            <form method="nes-dialog">
+                <h3 style="text-align: center;">Select Game Mode</h3>
+
+                <button class="nes-btn is-primary" id="singlePlayer-btn" value="single">Single-Player</button>
+                <button class="nes-btn is-primary" id="multiPlayer-btn" value="multi">Multi-Player</button>
+            </form>
+        </dialog>
+    </section>
+
+    <section>
+        <dialog class="nes-dialog is-rounded" id="dialog-gameover">
+            <form method="nes-dialog">
+                <h3 style="text-align: center;">Game Over!</h3>
+                <p id="result"></p>
+
+                <button class="nes-btn is-primary" id="restart-btn">Play again</button>
+                <button class="nes-btn is-primary" id="skipToScoreboard-btn">Add Score to Scoreboard</button>
+            </form>
+        </dialog>
+    </section>
+
+    <section>
+        <dialog class="nes-dialog is-rounded" id="dialog-addToScoreboard">
+            <form method="nes-dialog">
+                <h3 style="text-align: center;">Add Score to Scoreboard:</h3>
+                <div class="nes-field" style="margin-bottom: 2vh;">
+                    <label for="nameInput">Your name</label>
+                    <input type="text" id="nameInput" class="nes-input">
+                </div>
+
+                <button class="nes-btn is-error" onclick="resetBoard()">Play again</button>
+                <button class="nes-btn is-disabled" id="addToScoreboard-btn">Add to Scoreboard</button>
+                <a href="Scoreboard.html?game=TicTacToe">
+                    <button class="nes-btn is-success" id="viewScoreboard-btn" style="display: none">View Scoreboard</button>
+                </a>
+            </form>
+        </dialog>
+    </section>
+    <script src="js/sound/playNavSound.js"></script>
+</body>
+</html>
